@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix, accuracy_score
 
 # ********************************************************************************************
-# DATA PROCESSING
+# DATA PREPROCESSING
 dataset = pd.read_csv('Churn_Modelling.csv')
 X = dataset.iloc[:, 3:-1].values      # independent variables
 y = dataset.iloc[:, -1].values        # dependent variable
