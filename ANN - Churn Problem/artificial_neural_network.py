@@ -44,6 +44,8 @@ ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
 # output layer (activation = 'softmax' if output non binary)
 ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
 
+
+# training
 ann.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 print('Training started...')
@@ -207,9 +209,3 @@ while not pred_type_determined:
     else:
         pred_type = input(
             'Input unrecognized. Please enter \'T\' to run the test data or enter \'C\' to input custom data: \n')
-
-
-# example custom prediction
-# prediction_input = [[1, 0, 0, 600, 1, 40, 3, 60000, 2, 1, 1, 50000]]
-# print(ann.predict(sc.transform(
-#     [[1, 0, 0, 600, 1, 40, 3, 60000, 2, 1, 1, 50000]])) > 0.5)
